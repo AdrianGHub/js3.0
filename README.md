@@ -33,3 +33,9 @@ I've created this repo to keep track of the progress I make on daily basis throu
 ####
 JavaScript-Drum-Kit
 
+## What I've learnt from this project : 
+
+- key events [https://keycode.info/]
+- playing audio 
+- listen for transitionend event
+- basic operations on DOM elements
