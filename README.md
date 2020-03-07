@@ -9,6 +9,23 @@ I've created this repo to keep track of the progress I make on daily basis throu
 
 ---
 
+## You can run each of the projects following the steps listed below:  
+
+1. Install parcel bundler :
+
+`npm install -g parcel-bundler`
+
+2. Localize your directory with project and run following command :
+
+`npm init -y`
+
+`parcel index.html`
+
+3. Open website on localhost with index.html file displayed. 
+
+5. Enjoy! :sunglasses:
+
+
 ## Follow the Journey :rocket:
 
 ### Day 1: March 7 2020 
