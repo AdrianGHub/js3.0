@@ -39,3 +39,14 @@ JavaScript-Drum-Kit
 - playing audio 
 - listen for transitionend event
 - basic operations on DOM elements
+
+### Day 2: March 8 2020 
+####
+JS-Clock
+
+##### What I've learnt from this project : 
+
+- key events [https://keycode.info/]
+- playing audio 
+- listen for transitionend event
+- basic operations on DOM elements
