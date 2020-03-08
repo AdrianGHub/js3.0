@@ -46,7 +46,9 @@ JS-Clock
 
 ##### What I've learnt from this project : 
 
+- how to set time with `Date()` object in js
 - how to set inline styles using `Element.style`
 - css transform styling 
--`Element.style.Property` = '' resets the styling
+- `Element.style.Property` = '' resets the styling
+
 
