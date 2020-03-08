@@ -46,3 +46,7 @@ JS-Clock
 
 ##### What I've learnt from this project : 
 
+- how to set inline styles using `Element.style`
+- css transform styling 
+-`Element.style.Property` = '' resets the styling
+
