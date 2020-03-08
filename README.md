@@ -46,7 +46,3 @@ JS-Clock
 
 ##### What I've learnt from this project : 
 
-- key events [https://keycode.info/]
-- playing audio 
-- listen for transitionend event
-- basic operations on DOM elements
