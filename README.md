@@ -51,4 +51,15 @@ JS-Clock
 - css transform styling 
 - `Element.style.Property` = '' resets the styling
 
+### Day 3: March 8 2020 
+####
+CSS-Variables+JS
+
+##### What I've learnt from this project : 
+
+- how to create css varaibles
+- `Element.style.setProperty()`
+- use of dataset property
+- change and mousemove events in js
+
 
