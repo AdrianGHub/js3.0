@@ -62,4 +62,16 @@ CSS-Variables+JS
 - use of dataset property
 - change and mousemove events in js
 
+### Day 4: March 8 2020 
+####
+Array-Cardio-1
+
+##### What I've learnt from this project : 
+
+- implement basic operations on arrays
+- understand `map()`, `sort()`, `reduce()`, `filter()`
+- use of `console.table()`
+- retreive data from array to obj
+- working on DOM elements from DevTools i.e. [https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris]
+
 
