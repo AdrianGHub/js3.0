@@ -86,4 +86,13 @@ Flex-Panels-Image-Gallery
 - `'transitionend'` event in js
 - transition animations
 
+### Day 6: March 10 2020 
+####
+Type-Ahead
+
+##### What I've learnt from this project : 
+
+- how to use variable inside regex expression
+- understanding fetch() to retrieve data from API
+
 
