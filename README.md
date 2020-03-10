@@ -60,7 +60,7 @@ CSS-Variables+JS
 - how to create css varaibles
 - `Element.style.setProperty()`
 - use of dataset property
-- change and mousemove events in js
+- change and `'mousemove'` events in js
 
 ### Day 4: March 8 2020 
 ####
@@ -73,5 +73,17 @@ Array-Cardio-1
 - use of `console.table()`
 - retreive data from array to obj
 - working on DOM elements from DevTools i.e. [https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris]
+
+
+### Day 5: March 9 2020 
+####
+Flex-Panels-Image-Gallery
+
+##### What I've learnt from this project : 
+
+- understanding flexbox layout
+- nesting flexbox property within classes
+- `'transitionend'` event in js
+- transition animations
 
 
