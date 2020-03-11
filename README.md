@@ -98,3 +98,13 @@ Type-Ahead
 - use of `RegExp()` object 
 - put `filter()`, `map()`, `join()`, `replace()` into action
 
+### Day 7: March 11 2020 
+####
+Array-Cardio-1
+
+##### What I've learnt from this project : 
+
+- implement basic operations on arrays
+- understand `some()`, `every()`, `find()`, `findIndex()` methods
+- use of spread operator [...array]
+
