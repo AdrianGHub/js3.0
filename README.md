@@ -100,7 +100,7 @@ Type-Ahead
 
 ### Day 7: March 11 2020 
 ####
-Array-Cardio-1
+Array-Cardio-2
 
 ##### What I've learnt from this project : 
 
