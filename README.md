@@ -93,6 +93,8 @@ Type-Ahead
 ##### What I've learnt from this project : 
 
 - how to use variable inside regex expression
-- understanding fetch() to retrieve data from API
-
+- understanding `fetch()` to retrieve data from API
+- how to parse to DOM and display fetched data in browser
+- use of `RegExp()` object 
+- put `filter()`, `map()`, `join()`, `replace()` into action
 
