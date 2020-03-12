@@ -108,7 +108,7 @@ Array-Cardio-2
 - understand `some()`, `every()`, `find()`, `findIndex()` methods
 - use of spread operator [...array]
 
-### Day 7: March 11 2020 
+### Day 8: March 12 2020 
 ####
 HTML-Canvas
 
