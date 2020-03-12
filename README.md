@@ -108,3 +108,14 @@ Array-Cardio-2
 - understand `some()`, `every()`, `find()`, `findIndex()` methods
 - use of spread operator [...array]
 
+### Day 7: March 11 2020 
+####
+HTML-Canvas
+
+##### What I've learnt from this project : 
+
+- how to draw in html with canvas tag 
+- understand flag variables usage i.e. `let isDrawing = false`
+- experimenting with `globalCompositeOperation()`
+- use hsl effect for programmable colors 
+
