@@ -119,3 +119,10 @@ HTML-Canvas
 - experimenting with `globalCompositeOperation()`
 - use hsl effect for programmable colors 
 
+### Day 9: March 13 2020 
+####
+DevTools-Explore
+
+##### What I've learnt from this project : 
+
+- understanding the usage of different console commands in devtools 
