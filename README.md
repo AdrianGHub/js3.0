@@ -18,8 +18,6 @@ I've created this repo to keep track of the progress I make on daily basis throu
 
 2. Localize your directory with project and run following command :
 
-`npm init -y`
-
 `parcel index.html`
 
 3. Open website on localhost with index.html file displayed. 
