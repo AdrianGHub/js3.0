@@ -126,3 +126,15 @@ DevTools-Explore
 ##### What I've learnt from this project : 
 
 - understanding the usage of different console commands in devtools 
+
+### Day 10: March 15 2020 
+####
+Check-Multiple-Checkboxes
+
+##### What I've learnt from this project : 
+
+- use of `e.shiftKey` 
+- loop through each element of the selected query elements
+- practice with `this` keyword
+
+
