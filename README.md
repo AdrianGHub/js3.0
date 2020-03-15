@@ -108,7 +108,7 @@ Array-Cardio-2
 - understand `some()`, `every()`, `find()`, `findIndex()` methods
 - use of spread operator [...array]
 
-### Day 7: March 11 2020 
+### Day 8: March 12 2020 
 ####
 HTML-Canvas
 
@@ -119,3 +119,10 @@ HTML-Canvas
 - experimenting with `globalCompositeOperation()`
 - use hsl effect for programmable colors 
 
+### Day 9: March 13 2020 
+####
+DevTools-Explore
+
+##### What I've learnt from this project : 
+
+- understanding the usage of different console commands in devtools 
