@@ -138,3 +138,11 @@ Check-Multiple-Checkboxes
 ### Day 11: March 16 2020 
 ####
 Custom-Video-Player
+
+##### What I've learnt from this project : 
+
+- handle `mousemove`, `mousedown`, `mouseup` events 
+- handle video events such as `play()`, `pause()`, `timeupdate()`
+- toggle fullscreen mode with `requestFullscreen()`
+- use of `dataset` attribute
+- use different video properties i.e. `currentTime`, `duration`
