@@ -146,3 +146,12 @@ Custom-Video-Player
 - toggle fullscreen mode with `requestFullscreen()`
 - use of `dataset` attribute
 - use different video properties i.e. `currentTime`, `duration`
+
+### Day 12: March 16 2020 
+####
+Key-Sequence-Detection 
+
+- practice on arrays with e.g. `splice()`
+- use of `keyup()`
+- include `cornify.js` in my project to handle key detection
+
