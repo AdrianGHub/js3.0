@@ -146,3 +146,23 @@ Custom-Video-Player
 - toggle fullscreen mode with `requestFullscreen()`
 - use of `dataset` attribute
 - use different video properties i.e. `currentTime`, `duration`
+
+### Day 12: March 18 2020 
+####
+Key-Sequence-Detection 
+
+##### What I've learnt from this project : 
+
+- practice on arrays with e.g. `splice()`
+- use of `keyup()`
+- include `cornify.js` in my project to handle key detection
+
+### Day 13: March 21 2020 
+####
+Slide-In-On-Scroll
+
+##### What I've learnt from this project : 
+
+- understanding `scroll()` event
+- use of different properties of `window` e.g. `offsetTop`, `innerHeight`, `scrollY`
+- get familiar with `debounce` function 
