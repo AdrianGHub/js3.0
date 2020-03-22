@@ -166,3 +166,7 @@ Slide-In-On-Scroll
 - understanding `scroll()` event
 - use of different properties of `window` e.g. `offsetTop`, `innerHeight`, `scrollY`
 - get familiar with `debounce` function 
+
+### Day 14: March 21 2020 
+####
+References-Vs-Copying
