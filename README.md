@@ -170,3 +170,6 @@ Slide-In-On-Scroll
 ### Day 14: March 21 2020 
 ####
 References-Vs-Copying
+
+##### What I've learnt from this project : 
+- understanding the difference between reference and copy while working on arrays and objects
