@@ -71,8 +71,32 @@
     populateList(items, itemsList);
   }
 
+  function clearAll() {
+    items.length = 0;
+    itemsList.innerHTML = '';
+    localStorage.removeItem('items', JSON.stringify(items));
+  }
+
+  function checkAll() {
+    items.forEach(item => item.done = true);
+    localStorage.setItem('items', JSON.stringify(items));
+    populateList(items, itemsList);
+  }
+
+  function uncheckAll() {
+    items.forEach(item => item.done = false);
+    localStorage.setItem('items', JSON.stringify(items));
+    populateList(items, itemsList);
+  }
+  
+
   addItems.addEventListener('submit', addItem);
   itemsList.addEventListener('click', toggleDone);
+
+  clearButton.addEventListener('click', clearAll);
+  checkButton.addEventListener('click', checkAll);
+  uncheckButton.addEventListener('click', uncheckAll);
+
 
   populateList(items, itemsList);
 
