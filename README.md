@@ -167,9 +167,13 @@ Slide-In-On-Scroll
 - use of different properties of `window` e.g. `offsetTop`, `innerHeight`, `scrollY`
 - get familiar with `debounce` function 
 
-### Day 14: March 21 2020 
+### Day 14: March 22 2020 
 ####
 References-Vs-Copying
 
 ##### What I've learnt from this project : 
 - understanding the difference between reference and copy while working on arrays and objects
+
+### Day 15: March 23 2020 
+####
+Local-Storage
