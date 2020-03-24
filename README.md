@@ -172,8 +172,17 @@ Slide-In-On-Scroll
 References-Vs-Copying
 
 ##### What I've learnt from this project : 
+
 - understanding the difference between reference and copy while working on arrays and objects
 
 ### Day 15: March 23 2020 
 ####
 Local-Storage
+
+##### What I've learnt from this project : 
+
+- enter values into the form and display output in DOM
+- store elements in `LocalStorage`
+- understanding `getItem()`, `setItem()`, `removeItem()`
+- using EventDelegation on working elements
+
