@@ -186,3 +186,6 @@ Local-Storage
 - understanding `getItem()`, `setItem()`, `removeItem()`
 - using EventDelegation on working elements
 
+### Day 16: March 24 2020 
+####
+Shadow-Mouse-Move
