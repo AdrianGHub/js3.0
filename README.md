@@ -188,8 +188,16 @@ Local-Storage
 
 ### Day 16: March 24 2020 
 ####
-Shadow-Mouse-Move
+Shadow-Mouse-Move 
+
+- use of `mousemove()` event
+- assign object propertires with destructuring assignment
+- change text shadow based on properties calculations 
+
 
 ### Day 17: March 26 2020 
 ####
 Sort-Without-Articles
+
+- practice with `sort()` method on an array
+- add function for handling requirements (e.g. sort words ignoring articles)
