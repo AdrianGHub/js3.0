@@ -187,15 +187,17 @@ const timeNodes = document.querySelectorAll('[data-time]');
 
 const arrayOfTimes = [...timeNodes];
 
-const seconds = arrayOfTimes
+const arrayOfSeconds = arrayOfTimes
   .map(item => item.dataset.time)
   .map(timeCode => {
     const [mins, secs] = timeCode.split(':').map(parseFloat);
     return (mins * 60) + secs;
-    console.log(mins, secs);
   })
 
-console.log(seconds);
+const totalSeconds = arrayOfSeconds.reduce((total, seconds) => total += seconds);
+
+console.log(totalSeconds);
+
 
 
 </script>
