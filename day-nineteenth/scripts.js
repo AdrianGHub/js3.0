@@ -30,3 +30,19 @@ function paintToCanvas() {
     }, 16)
 }
 
+function takePhoto() {
+    snap.currentTIme = 0;
+    snap.play();
+
+    const data = canvas.toDataURL('image/jpeg');
+    const link = document.createElement('a');
+    link.href = data;
+    link.setAttribute('download', 'bolek');
+    link.innerHTML = `<img src="${data}" alt="Pobierz Bolka"/>`;
+    strip.insertBefore(link, strip.firstChild);
+
+}
+
+getVideo();
+video.addEventListener("canplay", paintToCanvas);
+photoButton.addEventListener("click", takePhoto);
