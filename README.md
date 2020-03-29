@@ -201,3 +201,18 @@ Sort-Without-Articles
 
 - practice with `sort()` method on an array
 - add function for handling requirements (e.g. sort words ignoring articles)
+
+
+### Day 18: March 27 2020 
+####
+Total-Time-With-Reduce
+
+
+### Day 19: March 28 2020 
+####
+Webcam-Fun
+
+
+### Day 20: March 29 2020 
+####
+Speech-Recognition
