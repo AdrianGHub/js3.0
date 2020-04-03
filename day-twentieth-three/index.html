@@ -52,6 +52,13 @@ function populateVoices() {
     voicesDropdown.innerHTML = voiceOptions;
 }
 
+function setVoice() {
+  msg.voice = voices.find(voice => voice.name === this.value);
+  toggle();
+}
+
+
+voicesDropdown.addEventListener('change', setVoice);
 speechSynthesis.addEventListener('voiceschanged', populateVoices);
 
 
