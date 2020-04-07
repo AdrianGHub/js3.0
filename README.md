@@ -217,3 +217,18 @@ Webcam-Fun
 ####
 Speech-Recognition
 
+
+### Day 21: March 31 2020 
+####
+Geolocation-Functionality
+
+
+### Day 22: April 01 2020 
+####
+Follow-Along-Links
+
+
+### Day 23: April 03 2020 
+####
+Speech-Synthesis
+
