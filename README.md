@@ -232,3 +232,13 @@ Follow-Along-Links
 ####
 Speech-Synthesis
 
+
+### Day 24: April 05 2020 
+####
+Sticky-Nav
+
+
+### Day 25: April 07 2020 
+####
+EventCapture-Propagation-Bubbling
+
