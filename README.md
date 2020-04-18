@@ -242,3 +242,27 @@ Sticky-Nav
 ####
 EventCapture-Propagation-Bubbling
 
+
+### Day 26: April 10 2020 
+####
+Stripe-Follow-Along-Nav
+
+
+### Day 27: April 12 2020 
+####
+Click&Drag
+
+
+### Day 28: April 13 2020 
+####
+Video-Speed_controller
+
+
+### Day 29: April 14 2020 
+####
+Countdown-Timer
+
+
+### Day 30: April 16 2020 
+####
+Whack-A-Mole
