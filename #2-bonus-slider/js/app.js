@@ -43,9 +43,23 @@ document.addEventListener('DOMContentLoaded', () => {
             dragging = false;
         })
 
+        handleEl.addEventListener('touchstart', () => {
+            dragging = true;
+        })
+
+        handleEl.addEventListener('touchend', () => {
+            dragging = false;
+        })
+
         window.addEventListener('mousemove', (e) => {
             if(dragging) {
                 move(e.clientX);
+            }
+        })
+
+        window.addEventListener('touchmove', (e) => {
+            if (dragging) {
+                move(e.touches[0].clientX);
             }
         })
     };
