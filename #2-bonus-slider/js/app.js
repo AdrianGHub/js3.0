@@ -9,11 +9,21 @@ const secondImageEl = document.querySelector('.slider__image-container--second i
 
 
 
+function adjustImages() {
+    const imagesContainerWidth = imagesContainerEl.offsetWidth;
+
+    firstImageEl.style.width = `${imagesContainerWidth}px`;
+    secondImageEl.style.width = `${imagesContainerWidth}px`;
+}
 
 
 
 
 
+
+window.addEventListener('resize', adjustImages);
+
+adjustImages();
 
 
 
