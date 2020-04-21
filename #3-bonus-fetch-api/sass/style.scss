@@ -1,5 +1,5 @@
 @import 'reset';
-
-body {
-    background-color: rgb(133, 124, 124);
-}
+@import 'typography';
+@import 'base';
+@import 'featured-dog';
+@import 'tiles';
