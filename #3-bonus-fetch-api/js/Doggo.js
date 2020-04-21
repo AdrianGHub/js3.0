@@ -3,17 +3,16 @@ class Doggo {
 		this.apiUrl = "https://dog.ceo/api/";
 		this.imgTag = document.querySelector(".featured-dog img");
 		this.backgroundEl = document.querySelector(".featured-dog__background");
-		this.tilesEl = document.querySelector('.tiles');
-		this.spinnerEl = document.querySelector('.spinner');
+		this.tilesEl = document.querySelector(".tiles");
+		this.spinnerEl = document.querySelector(".spinner");
 	}
 
-
 	showLoading() {
-		this.spinnerEl.classList.add('spinner-visible');
+		this.spinnerEl.classList.add("spinner-visible");
 	}
 
 	hideLoading() {
-		this.spinnerEl.classList.remove('spinner-visible');
+		this.spinnerEl.classList.remove("spinner-visible");
 	}
 
 	listBreeds() {
@@ -34,7 +33,6 @@ class Doggo {
 
 	getRandomImageByBreed(breed) {
 		return fetch(`${this.apiUrl}breed/${breed}/images/random`)
-
 			.then((res) => res.json())
 			.then((img) => {
 				return img.message;
@@ -42,20 +40,22 @@ class Doggo {
 			.catch((err) => console.log("Ups...", err));
 	}
 
+	showImageWhenReady(img) {
+		this.imgTag.setAttribute("src", img);
+		this.backgroundEl.style.background = `url(${img})`;
+		this.hideLoading();
+	}
+
 	init() {
 		this.showLoading();
-		this.getRandomImage().then((src) => {
-			this.imgTag.setAttribute("src", src);
-			this.backgroundEl.style.background = `url(${src})`;
-			this.hideLoading();
-		});
+		this.getRandomImage().then(img => this.showImageWhenReady(img));
 	}
 
 	addBreed(breed, subBreed) {
 		let name;
 		let type;
 
-		if(typeof subBreed === 'undefined') {
+		if (typeof subBreed === "undefined") {
 			name = breed;
 			type = breed;
 		} else {
@@ -63,22 +63,18 @@ class Doggo {
 			type = `${breed}/${subBreed}`;
 		}
 
-		const tile = document.createElement('div');
-		tile.classList.add('tiles__tile');
+		const tile = document.createElement("div");
+		tile.classList.add("tiles__tile");
 
-		const tileContent = document.createElement('div');
-		tileContent.classList.add('tiles__tile-content');
+		const tileContent = document.createElement("div");
+		tileContent.classList.add("tiles__tile-content");
 
 		tileContent.innerText = name;
-		tileContent.addEventListener('click', () => {
+		tileContent.addEventListener("click", () => {
+			window.scroll(0, 0);
 			this.showLoading();
-			this.getRandomImageByBreed(type)
-				.then((src) => {
-					this.imgTag.setAttribute("src", src);
-					this.backgroundEl.style.background = `url(${src})`;
-					this.hideLoading();
-				});
-		})
+			this.getRandomImageByBreed(type).then(img => this.showImageWhenReady(img));
+		});
 
 		tile.appendChild(tileContent);
 		this.tilesEl.appendChild(tile);
