@@ -2,7 +2,8 @@ class Doggo {
 	constructor() {
 		this.apiUrl = "https://dog.ceo/api/";
 		this.imgTag = document.querySelector(".featured-dog img");
-		this.backgroundEl = document.querySelector('.featured-dog__background');
+		this.backgroundEl = document.querySelector(".featured-dog__background");
+		this.tilesEl = document.querySelector('.tiles');
 	}
 
 	listBreeds() {
@@ -21,14 +22,67 @@ class Doggo {
 			.catch((err) => console.log("Ups...", err));
 	}
 
+	getRandomImageByBreed(breed) {
+		return fetch(`${this.apiUrl}breed/${breed}/images/random`)
+
+			.then((res) => res.json())
+			.then((img) => {
+				return img.message;
+			})
+			.catch((err) => console.log("Ups...", err));
+	}
+
 	init() {
-        this.getRandomImage()
-			.then((src) => { 
-				this.imgTag.setAttribute("src", src);
-				this.backgroundEl.style.background = `url(${src})`;
-			});
-        this.listBreeds()
-            .then(breeds => console.log(breeds))
+		this.getRandomImage().then((src) => {
+			this.imgTag.setAttribute("src", src);
+			this.backgroundEl.style.background = `url(${src})`;
+		});
+	}
+
+	addBreed(breed, subBreed) {
+		let name;
+		let type;
+
+		if(typeof subBreed === 'undefined') {
+			name = breed;
+			type = breed;
+		} else {
+			name = `${breed} ${subBreed}`;
+			type = `${breed}/${subBreed}`;
+		}
+
+		const tile = document.createElement('div');
+		tile.classList.add('tiles__tile');
+
+		const tileContent = document.createElement('div');
+		tileContent.classList.add('tiles__tile-content');
+
+		tileContent.innerText = name;
+		tileContent.addEventListener('click', () => {
+			this.getRandomImageByBreed(type)
+				.then((src) => {
+					this.imgTag.setAttribute("src", src);
+					this.backgroundEl.style.background = `url(${src})`;
+				});
+		})
+
+		tile.appendChild(tileContent);
+		this.tilesEl.appendChild(tile);
+	}
+
+	showAllBreeds() {
+		this.listBreeds().then((breeds) => {
+			for (const breed in breeds) {
+				if (breeds[breed].length === 0) {
+					this.addBreed(breed);
+				} else {
+					for (const subBreed of breeds[breed]) {
+						this.addBreed(breed, subBreed);
+						console.log(`${breed}/${subBreed}`);
+					}
+				}
+			}
+		});
 	}
 }
 
