@@ -1,25 +1,38 @@
 import '../sass/style.scss'
 
+// UNSPLASH API
+// const imgTag = document.querySelector('img');
 
-function listOfBreeds() {
+
+// function renderItem(){
+//   fetch(`https://source.unsplash.com/400x400/?space`)
+//   .then((response)=> {   
+//     return response.url;
+//   })
+//   .then((image) => imgTag.setAttribute('src', image)); 
+// }
+
+
+// renderItem();
+
+
+function listBreeds() {
     return fetch('https://dog.ceo/api/breeds/list/all')
         .then(res => res.json())
-        .then(breeds => {
-            return breeds.message;
-        })
-        .catch(err => console.log('Ups...', err))
-}; 
+        .then(data => console.log(data))
+        .catch((err) => console.log("Ups...", err))
+}
 
-function getRandomImage() {
+function renderImage() {
     return fetch('https://dog.ceo/api/breeds/image/random')
         .then(res => res.json())
-        .then(image => {
-            return image.message;
-        }) 
-        .catch(err => console.log('Ups...', err))
+        .then(img => {
+            return img.message;
+        })
+        .catch((err) => console.log("Ups...", err))
 }
 
 const imgTag = document.querySelector('img');
 
-getRandomImage()
-    .then((image) => imgTag.setAttribute('src', image));
+renderImage()
+    .then(img => imgTag.setAttribute('src', img));
