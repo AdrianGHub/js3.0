@@ -16,6 +16,7 @@ body {
     border: 10px solid #fafafa;
     margin: 60px auto;
     position: relative;
+    overflow: hidden;
 }
 
 .slider .prev, .slider .next {
@@ -29,7 +30,6 @@ body {
     top: 50%;
     margin-top: -20px;
     cursor: pointer;
-    transition: all .3s ease;
 } 
 
 .slider .prev:hover, .slider .next:hover {
@@ -48,6 +48,19 @@ body {
 .slider .slider__wrapper .image__wrapper .image {
     max-width: 100%;
     display: block;
+    animation: zoom 1s ease;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(2);opacity: 0;
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);opacity: 1;
+    }
 }
 
 .slider .slider__wrapper .image__wrapper {
