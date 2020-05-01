@@ -1,1 +1,1 @@
-## Homepage - WTF CoTenFrontend #2 Edition :octocat:
+## Slider - WTF CoTenFrontend #2 Edition :octocat:
