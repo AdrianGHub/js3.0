@@ -4,16 +4,22 @@ const nextButton = document.querySelector('.next');
 let totalSlides = slides.length;
 let index = 0;
 
+prevButton.classList.add('unactive');
+
 const changeImageHandler = (direction) => {
     if(direction === "next") {
+        prevButton.classList.remove('unactive');
         index++;
-        if(index === totalSlides) {
-            index = 0;
+        
+        if(index === totalSlides - 1) {
+            nextButton.classList.add('unactive');
         } 
     } else {
-        if(index === 0) {
-            index = totalSlides - 1;
+        if(index === 1) {
+            prevButton.classList.add('unactive');
+            index = 0;
         } else {
+            nextButton.classList.remove('unactive');
             index--;
         }
     }

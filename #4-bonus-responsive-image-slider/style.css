@@ -51,6 +51,10 @@ body {
     animation: zoom 1s ease;
 }
 
+.unactive {
+    display: none;
+}
+
 @keyframes zoom {
     0% {
         transform: scale(2);opacity: 0;
