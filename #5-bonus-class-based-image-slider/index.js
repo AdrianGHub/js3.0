@@ -20,9 +20,10 @@ class Slider {
         this.nextBtn = document.querySelector(this.UISelectors.nextButton);
 
         this.image = document.createElement('img');
+        this.image.setAttribute('class', 'slide__image');
         this.image.setAttribute('src', this.images[0]);
 
         this.slide.appendChild(this.image);
-
     }
+
 }
