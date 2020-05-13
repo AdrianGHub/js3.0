@@ -7,6 +7,7 @@ class Slider {
         this.image = null;
         this.currentSlide = 0;
         this.slideArrayLength = 0;
+        this.slideCaption = null;
 
         this.UISelectors = {
             slide: '[data-slide]',
@@ -29,6 +30,12 @@ class Slider {
         this.slideArrayLength = this.images && this.images.length;
 
         this.slide.appendChild(this.image);
+
+        this.slideCaption = document.createElement('figcaption');
+        this.addCaption();
+        this.slideCaption.setAttribute('class', 'slide__caption');
+        this.slide.appendChild(this.slideCaption);
+
         this.disableButtons();
         this.addListeners();
     }
@@ -51,8 +58,14 @@ class Slider {
     changeSlide(index) {
         this.currentSlide = index;
 
+        this.addCaption();
+
         this.setSlideAttributes(index);
         this.disableButtons();
+    }
+
+    addCaption() {
+        this.slideCaption.innerText = `${this.currentSlide + 1}/${this.slideArrayLength}`;
     }
 
     setSlideAttributes(index) {
