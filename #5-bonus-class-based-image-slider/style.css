@@ -38,6 +38,12 @@ body {
     transition: background-color .1s eas-in;
 }
 
+.slider__button:disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+}
+
 .slider__button:hover {
     background-color: #369b6d;
 }
