@@ -17,17 +17,20 @@
       <button class="slider__button slider__button--next" data-button-next>X</button>
     </section>
   </main>
-  <script defer src="index.js"></script>
+  <script async src="index.js"></script>
   <script>
-    const imageArray = [
-      './public/weather1.jpg',
-      './public/weather2.jpg',
-      './public/weather3.jpg',
-      './public/weather4.jpg',
-      './public/weather5.jpg'
+    document.addEventListener('DOMContentLoaded', () => {
+      const imageArray = [
+      './public/img/weather1.jpg',
+      './public/img/weather2.jpg',
+      './public/img/weather3.jpg',
+      './public/img/weather4.jpg',
+      './public/img/weather5.jpg'
     ]
 
-    const slider = new Slider(imageArray);
+      const slider = new Slider(imageArray);
+      slider.initializeSlider();
+    })
   </script>
 </body>
 
