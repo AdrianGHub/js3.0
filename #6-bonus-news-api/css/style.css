@@ -1,9 +1,28 @@
-* {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
     font-family: 'Lato', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.articles {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.articles__content {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+}
+
+.article__image {
+    max-width: 400px;
 }

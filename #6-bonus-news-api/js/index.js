@@ -32,7 +32,7 @@ class PolishNews {
 
         this.createArticlesCatalog(this.articlesArray);
 
-        console.log(articles);
+        // console.log(articles);
 
     }
 
@@ -45,7 +45,7 @@ class PolishNews {
 
     createArticlesCatalog(articles) {
         this.articlesCatalog.innerHTML += [
-            articles.map(article => this.createArticle(article))
+            articles.map(article => this.createArticle(article)).join('')
         ];
     }
 
@@ -54,11 +54,11 @@ class PolishNews {
             <article class="article">
                 <header class="article__header">
                     <h2 class="article__heading">
-                        ${name} - ${author ? author : `Brak autora`}
+                        ${name} - ${author ? author : 'Brak autora 😔'}
                     </h2>
                     <img class="article__image" src="${urlToImage}" alt="Zdjęcie artykułu.""/>
-                    <span class="article__date">Data opublikowania: ${publishedAt}</span>
-                    <p class="article__content">${content}</p>
+                    <p class="article__date">Data opublikowania: ${publishedAt}</p>
+                    <p class="article__content">${content ? content : 'Brak opisu artykułu 😟'}</p>
                     <a class="article__link"href="${url}">Link do całego artykułu</a>
                 </header>
             </article>
