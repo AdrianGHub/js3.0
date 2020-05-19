@@ -12,12 +12,13 @@
         <header class="articles__header">
             <h1 class="article__heading">Bieżące wiadomości z Polski</h1>
         </header>
+        <section class="articles__content" data-content></section>
     </main>
 
     <script src="js/index.js"></script>
     <script>
-        const articles = new PolishNews();
-        articles.initializeArticles()
+        const articlesCatalog = new PolishNews();
+        articlesCatalog.initializeArticlesCatalog()
     </script>
 </body>
 </html>
