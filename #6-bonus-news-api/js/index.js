@@ -71,7 +71,7 @@ class PolishNews {
                     <p class="article__content">${
 						content ? content : "Brak opisu artykułu 😟"
 					}</p>
-                    <a class="article__link"href="${url}">Link do całego artykułu</a>
+                    <a class="article__link"href="${url}">Czytaj cały artykuł &#8594;</a>
             </article>
         `;
 	}
