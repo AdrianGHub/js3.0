@@ -40,19 +40,20 @@ class PolishNews {
 	}
 
 	async pullArticles() {
-		this.loader.classList.remove('hide');
-		this.loadButton.classList.add('hide');
+		this.toggleShowElement(this.loader, this.loadButton);
 		const { articles } = await this.fetchData(`${this.API_ENDPOINT}&page=${this.currentPage}&pageSize=${this.pageSize}`);
-		this.loader.classList.add('hide');
-		this.loadButton.classList.remove('hide');
+		this.toggleShowElement(this.loader, this.loadButton);
 
 		this.articlesArray = [...this.articlesArray, ...articles]
 		this.newArticlesArray = [...articles];
 
 		this.createArticlesCatalog(this.newArticlesArray);
 		this.currentPage++;
-
 		// console.log(articles);
+	}
+
+	toggleShowElement(...elements) {
+		elements.forEach(element => element.classList.toggle('hide'));
 	}
 
 	async fetchData(url) {
