@@ -45,14 +45,24 @@ class PolishNews {
 
     createArticlesCatalog(articles) {
         this.articlesCatalog.innerHTML += [
-            articles.map(article => {
-                if(article.author) {
-                    return `Autor artykułu: ${article.author}`
-                } else {
-                    return 'Brak autora 😔'
-                }
-            })
-        ]
+            articles.map(article => this.createArticle(article))
+        ];
+    }
+
+    createArticle({source:{name},author, urlToImage, publishedAt, content, url}) {
+        return `
+            <article class="article">
+                <header class="article__header">
+                    <h2 class="article__heading">
+                        ${name} - ${author ? author : `Brak autora`}
+                    </h2>
+                    <img class="article__image" src="${urlToImage}" alt="Zdjęcie artykułu.""/>
+                    <span class="article__date">Data opublikowania: ${publishedAt}</span>
+                    <p class="article__content">${content}</p>
+                    <a class="article__link"href="${url}">Link do całego artykułu</a>
+                </header>
+            </article>
+        `
     }
 }
 
