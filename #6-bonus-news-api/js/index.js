@@ -5,10 +5,11 @@ class PolishNews {
 		this.pageSize = 3;
 		this.currentPage = 1;
 		this.articlesArray = [];
+		this.newArticlesArray = [];
 
 
 		this.articlesCatalog = null;
-		this.button = null;
+		this.loadButton = null;
 
 		this.API = "http://newsapi.org/";
 		this.API_VERSION = "v2";
@@ -26,15 +27,23 @@ class PolishNews {
 		this.articlesCatalog = document.querySelector(this.UISelectors.content);
 		this.loadButton = document.querySelector(this.UISelectors.button);
 
+		this.addEventListeners();
+
 		this.pullArticles();
+	}
+
+	addEventListeners() {
+		this.loadButton.addEventListener('click', () => this.pullArticles());
 	}
 
 	async pullArticles() {
 		const { articles } = await this.fetchData(`${this.API_ENDPOINT}&page=${this.currentPage}&pageSize=${this.pageSize}`);
 
-		this.articlesArray = [...articles];
+		this.articlesArray = [...this.articlesArray, ...articles]
+		this.newArticlesArray = [...articles];
 
-		this.createArticlesCatalog(this.articlesArray);
+		this.createArticlesCatalog(this.newArticlesArray);
+		this.currentPage++;
 
 		// console.log(articles);
 	}

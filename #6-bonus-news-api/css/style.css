@@ -57,7 +57,7 @@ body {
     padding: 20px var(--primary-padding);
     border-radius: 5px;
     font-size: 20px;
-    transition: .3s;
+    transition: backgroud-color .1s ease-in;
 }
 
 .articles__button:hover {
