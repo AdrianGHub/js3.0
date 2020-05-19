@@ -2,10 +2,13 @@ const API_KEY = "5c4695678e324eb1bccad1f9e170f730";
 
 class PolishNews {
 	constructor() {
-		this.pageSize = 12;
+		this.pageSize = 3;
 		this.currentPage = 1;
 		this.articlesArray = [];
+
+
 		this.articlesCatalog = null;
+		this.button = null;
 
 		this.API = "http://newsapi.org/";
 		this.API_VERSION = "v2";
@@ -15,17 +18,19 @@ class PolishNews {
 
 		this.UISelectors = {
 			content: "[data-content]",
+			button: "[data-button]"
 		};
 	}
 
 	initializeArticlesCatalog() {
 		this.articlesCatalog = document.querySelector(this.UISelectors.content);
+		this.loadButton = document.querySelector(this.UISelectors.button);
 
 		this.pullArticles();
 	}
 
 	async pullArticles() {
-		const { articles } = await this.fetchData(`${this.API_ENDPOINT}&pageSize=${this.pageSize}`);
+		const { articles } = await this.fetchData(`${this.API_ENDPOINT}&page=${this.currentPage}&pageSize=${this.pageSize}`);
 
 		this.articlesArray = [...articles];
 

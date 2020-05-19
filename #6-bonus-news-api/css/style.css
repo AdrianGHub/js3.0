@@ -21,8 +21,11 @@ body {
 }
 
 .articles {
+    display: flex;
+    flex-direction: column;
     max-width: var(--max-width);
     margin: var(--primary-margin);
+    padding: 10px;
 }
 
 .articles__content {
@@ -41,6 +44,26 @@ body {
 
 .articles__heading {
     text-align: center;
+}
+
+.articles__footer {
+    margin: 50px auto;
+}
+
+.articles__button {
+    color: #fff;
+    background-color: rgb(170, 54, 54);
+    border: 4px solid rgb(170, 54, 54);
+    padding: 20px var(--primary-padding);
+    border-radius: 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.articles__button:hover {
+    background-color: rgb(207, 92, 92);
+    border-color: rgb(207, 92, 92);
+    cursor: pointer;
 }
 
 .article {
