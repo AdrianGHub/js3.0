@@ -1,4 +1,3 @@
-const API_KEY = "5c4695678e324eb1bccad1f9e170f730";
 
 class WebDevNews {
 	constructor() {
@@ -15,9 +14,11 @@ class WebDevNews {
 
 		this.API = "http://newsapi.org/";
 		this.API_VERSION = "v2";
-		this.API_RESOURCE = `everything?q=javascript, web&apiKey=${API_KEY}`;
+		this.API_RESOURCE = "everything?";
+		this.API_QUERY = "javascript, web";
+		this.API_KEY = "5c4695678e324eb1bccad1f9e170f730";
 
-		this.API_ENDPOINT = `${this.API}/${this.API_VERSION}/${this.API_RESOURCE}`;
+		this.API_ENDPOINT = `${this.API}/${this.API_VERSION}/${this.API_RESOURCE}q=${this.API_QUERY}&apiKey=${this.API_KEY}`;
 
 		this.UISelectors = {
 			content: "[data-content]",
