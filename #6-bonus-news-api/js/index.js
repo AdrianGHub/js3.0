@@ -101,7 +101,7 @@ class WebDevNews {
                     <p class="article__content">${
 						content ? content : "Brak opisu artykułu 😟"
 					}</p>
-                    <a class="article__link"href="${url}">Czytaj cały artykuł &#8594;</a>
+                    <a class="article__link"href="${url}" target="_blank">Czytaj cały artykuł &#8594;</a>
             </article>
         `;
 	};
