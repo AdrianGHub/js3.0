@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poland News API</title>
+    <title>Tech News API</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,6 +11,10 @@
     <main class="articles">
         <header class="articles__header">
             <h1 class="articles__heading">Niezależny serwis informacyjny - innowacje technologiczne</h1>
+            <div class="search">
+                <input type="text" name="search" id="search" class="search__input" placeholder="Wyszukaj artykuł... 🔎" autocomplete="off">
+                <label for="search" class="search__label">Wyszukaj artykuł</label>
+            </div>
         </header>
         <section class="articles__content" data-content></section>
         <footer class="articles__footer">

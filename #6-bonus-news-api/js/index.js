@@ -88,7 +88,7 @@ class PolishNews {
                     ${author ? author : "Brak autora 😔"}
                     </p>
                     </header>
-                    <p class="article__date">Data opublikowania: ${publishedAt}</p>
+                    <p class="article__date">Data opublikowania: ${publishedAt.slice(0, 10)}</p>
                     <img class="article__image" src="${urlToImage}" alt="Zdjęcie artykułu.""/>
                     <p class="article__title">${title}</p>
                     <p class="article__content">${
