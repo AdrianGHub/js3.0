@@ -11,6 +11,7 @@ class WebDevNews {
 		this.loadButton = null;
 		this.loader = null;
 		this.search = null;
+		this.searchButton = null;
 
 		this.API = "http://newsapi.org/";
 		this.API_VERSION = "v2";
@@ -25,7 +26,8 @@ class WebDevNews {
 			button: "[data-button]",
 			loader: "[data-loader]",
 			search: 'search',
-			article: "[data-article]"
+			article: "[data-article]",
+			searchButton: "[data-search]"
 		};
 	}
 
@@ -34,6 +36,7 @@ class WebDevNews {
 		this.loadButton = document.querySelector(this.UISelectors.button);
 		this.loader = document.querySelector(this.UISelectors.loader);
 		this.search = document.getElementById(this.UISelectors.search);
+		this.searchButton = document.querySelector(this.UISelectors.searchButton);
 
 		this.addEventListeners();
 
@@ -42,7 +45,7 @@ class WebDevNews {
 
 	addEventListeners() {
 		this.loadButton.addEventListener('click', () => this.pullArticles());
-		this.search.addEventListener('keyup', () => this.filterArticles());
+		this.searchButton.addEventListener('click', () => this.filterArticles());
 	}
 
 	async pullArticles() {
