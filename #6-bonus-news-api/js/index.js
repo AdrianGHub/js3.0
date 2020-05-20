@@ -11,17 +11,20 @@ class PolishNews {
 		this.articlesCatalog = null;
 		this.loadButton = null;
 		this.loader = null;
+		this.search = null;
 
 		this.API = "http://newsapi.org/";
 		this.API_VERSION = "v2";
-		this.API_RESOURCE = `everything?q=tech&apiKey=${API_KEY}`;
+		this.API_RESOURCE = `everything?q=javascript, web&apiKey=${API_KEY}`;
 
 		this.API_ENDPOINT = `${this.API}/${this.API_VERSION}/${this.API_RESOURCE}`;
 
 		this.UISelectors = {
 			content: "[data-content]",
 			button: "[data-button]",
-			loader: "[data-loader]"
+			loader: "[data-loader]",
+			search: 'search',
+			article: "[data-article]"
 		};
 	}
 
@@ -29,6 +32,7 @@ class PolishNews {
 		this.articlesCatalog = document.querySelector(this.UISelectors.content);
 		this.loadButton = document.querySelector(this.UISelectors.button);
 		this.loader = document.querySelector(this.UISelectors.loader);
+		this.search = document.getElementById(this.UISelectors.search);
 
 		this.addEventListeners();
 
@@ -37,6 +41,7 @@ class PolishNews {
 
 	addEventListeners() {
 		this.loadButton.addEventListener('click', () => this.pullArticles());
+		this.search.addEventListener('keyup', () => this.filterArticles());
 	}
 
 	async pullArticles() {
@@ -49,7 +54,8 @@ class PolishNews {
 
 		this.createArticlesCatalog(this.newArticlesArray);
 		this.currentPage++;
-		// console.log(articles);
+
+		console.log(articles);
 	}
 
 	toggleShowElement(...elements) {
@@ -70,7 +76,7 @@ class PolishNews {
 	}
 
 	createArticle({
-		source: { name },
+		source: { name, id },
 		author,
         urlToImage,
         title,
@@ -79,7 +85,7 @@ class PolishNews {
 		url,
 	}) {
 		return `
-            <article class="article">
+            <article class="article" id=${id} data-article>
                 <header class="article__header">
                     <h2 class="article__heading">
                         ${name}
@@ -97,5 +103,20 @@ class PolishNews {
                     <a class="article__link"href="${url}">Czytaj cały artykuł &#8594;</a>
             </article>
         `;
+	};
+
+	filterArticles() {
+		const searchQuery = this.search.value.toLowerCase();
+
+		searchQuery.length 
+			? this.loadButton.classList.add('hide')
+			: this.loadButton.classList.remove('hide');
+
+		document.querySelectorAll(this.UISelectors.article).forEach((el) => el.classList.remove('hide'));
+		
+		const filteredArticles = this.articlesArray.filter(({title}) => !title.toLowerCase().includes(searchQuery));
+
+		filteredArticles.forEach(({source: {id}}) => document.getElementById(id).classList.add("hide"));
 	}
+
 }
