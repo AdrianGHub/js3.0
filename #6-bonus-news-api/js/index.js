@@ -17,7 +17,7 @@ class WebDevNews {
 		this.API_VERSION = "v2";
 		this.API_RESOURCE = "everything?";
 		this.API_QUERY = "javascript, web";
-		this.API_KEY = "5c4695678e324eb1bccad1f9e170f730";
+		this.API_KEY = "edf3df56d9af43b3ab64e0effbbba0c9";
 
 		this.API_ENDPOINT = `${this.API}/${this.API_VERSION}/${this.API_RESOURCE}q=${this.API_QUERY}&apiKey=${this.API_KEY}`;
 
