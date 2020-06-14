@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Grid, Hidden } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 import { SearchBar, VideoDetails, VideoList } from './components';
 
