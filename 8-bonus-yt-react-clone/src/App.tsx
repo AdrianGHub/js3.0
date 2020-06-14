@@ -13,6 +13,10 @@ class App extends Component {
         selectedVideo: null
     }
 
+    componentDidMount() {
+        this.handleSubmit('async await in real project');
+    }
+
     onVideoSelect = (video: string) => {
         this.setState({ selectedVideo: video });
     }
