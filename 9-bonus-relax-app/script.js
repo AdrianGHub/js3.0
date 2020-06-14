@@ -16,6 +16,7 @@ function breatheAnimation() {
 
 		setTimeout(() => {
 			text.innerText = "Breathe out";
+			container.className = "container shrink";
 		}, holdTime);
 	}, breatheTime);
 }
