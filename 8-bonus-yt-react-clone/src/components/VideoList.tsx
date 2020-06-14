@@ -4,13 +4,19 @@ import { Grid } from '@material-ui/core';
 import VideoItem from './VideoItem';
 
 interface Props {
-    videos: any
+    videos: any,
+    onVideoSelect: any
 }
 
-const videoList: React.FC<Props> = ({ videos }) => {
-    const listOfVideos  = videos.map((video: string, id: string) => <VideoItem key={id} video={video}/>);
+const videoList: React.FC<Props> = ({ videos, onVideoSelect }) => {
+    const listOfVideos  = videos.map((video: string, id: string) => <VideoItem key={id} video={video} onVideoSelect={onVideoSelect}/>);
 
-    return listOfVideos;
+    return (
+    <Grid container spacing={10}>
+        {listOfVideos}
+    </Grid>     
+    );
+    
 };
 
 export default videoList;

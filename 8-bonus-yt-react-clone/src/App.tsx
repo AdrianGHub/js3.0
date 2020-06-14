@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Grid } from '@material-ui/core';
+import { Grid, Hidden } from '@material-ui/core';
 
 import { SearchBar, VideoDetails, VideoList } from './components';
 
@@ -11,6 +11,10 @@ class App extends Component {
     state = {
         videos: [],
         selectedVideo: null
+    }
+
+    onVideoSelect = (video: string) => {
+        this.setState({ selectedVideo: video });
     }
 
     handleSubmit = async (searchTerm: string) => {
@@ -28,6 +32,7 @@ class App extends Component {
     render () {
         const { selectedVideo, videos } = this.state;
         return (
+            <div style={{overflowX: 'hidden'}}>
             <Grid justify="center" container spacing={6}>
                 <Grid item xs={12}>
                     <Grid container spacing={6}>
@@ -39,11 +44,14 @@ class App extends Component {
                             <VideoDetails video={selectedVideo}/>
                         </Grid>
                         <Grid item xs={4}>
-                            <VideoList videos={videos}/>
+                            <VideoList 
+                            videos={videos}
+                            onVideoSelect={this.onVideoSelect}/>
                         </Grid>
                     </Grid>
                 </Grid>
             </Grid>
+            </div>
         );
     }
 }
