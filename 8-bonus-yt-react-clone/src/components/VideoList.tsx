@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class VideoList extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        );
-    }
+import { Grid } from '@material-ui/core';
+import VideoItem from './VideoItem';
+
+interface Props {
+    videos: any
 }
 
-export default VideoList;
+const videoList: React.FC<Props> = ({ videos }) => {
+    const listOfVideos  = videos.map((video: string, id: string) => <VideoItem key={id} video={video}/>);
+
+    return listOfVideos;
+};
+
+export default videoList;
