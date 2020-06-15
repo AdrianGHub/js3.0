@@ -26,7 +26,19 @@ const getCountries = async (toCurrency) => {
 		`https://restcountries.eu/rest/v2/currency/${toCurrency}`
 	);
 
-	response.data.map((country) => country.name);
+	return response.data.map((country) => country.name);
 };
 
 getCountries("PLN");
+
+const convertCurrency = async (fromCurrency, toCurrency, amount) => {
+	const exchangeRate = await getExchangeRate(fromCurrency, toCurrency);
+	const countries = await getCountries(toCurrency);
+	const convertedAmount = (amount * exchangeRate).toFixed(2);
+
+	return `${amount} ${fromCurrency} is worth ${convertedAmount} ${toCurrency}. You can spent these in the following countries: ${countries}`;
+};
+
+convertCurrency("USD", "PLN", 30).then((message) => {
+	console.log(message);
+});
