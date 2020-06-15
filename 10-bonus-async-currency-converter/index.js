@@ -20,3 +20,13 @@ const getExchangeRate = async (fromCurrency, toCurrency) => {
 };
 
 getExchangeRate("USD", "PLN");
+
+const getCountries = async (toCurrency) => {
+	const response = await axios.get(
+		`https://restcountries.eu/rest/v2/currency/${toCurrency}`
+	);
+
+	response.data.map((country) => country.name);
+};
+
+getCountries("PLN");
