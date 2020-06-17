@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./assets/style.css";
 import quizService from "./quizService/index";
+import QuestionBox from "./components/QuestionBox";
 
 class QuizApp extends Component {
 	state = {
@@ -18,6 +19,7 @@ class QuizApp extends Component {
 	componentDidMount() {
 		this.getQuestions();
 	}
+
 	render() {
 		return (
 			<div className="container">
@@ -25,10 +27,17 @@ class QuizApp extends Component {
 				{this.state.questionBank.length > 0 &&
 					this.state.questionBank.map(
 						({ question, answers, correct, questionId }) => (
-							<h4>{question})</h4>
+							<h4>
+								{
+									<QuestionBox
+										question={question}
+										options={answers}
+										key={questionId}
+									/>
+								}
+							</h4>
 						)
 					)}
-				;
 			</div>
 		);
 	}
