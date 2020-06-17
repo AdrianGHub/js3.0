@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./assets/style.css";
 import quizService from "./quizService/index";
 import QuestionBox from "./components/QuestionBox";
+import Result from "./components/Result";
 
 class QuizApp extends Component {
 	state = {
@@ -27,6 +28,14 @@ class QuizApp extends Component {
 		}
 		this.setState({
 			responses: this.state.responses < 5 ? this.state.responses + 1 : 5,
+		});
+	};
+
+	playAgain = () => {
+		this.getQuestions();
+		this.setState({
+			score: 0,
+			responses: 0,
 		});
 	};
 
@@ -56,6 +65,15 @@ class QuizApp extends Component {
 							</h4>
 						)
 					)}
+
+				{this.state.responses === 5 ? (
+					<h2>
+						<Result
+							score={this.state.score}
+							playAgain={this.playAgain}
+						/>
+					</h2>
+				) : null}
 			</div>
 		);
 	}
