@@ -8,7 +8,7 @@ const API_KEY = "b9922818ac116ec10b8d6a58e1e30696";
 
 const getExchangeRate = async (fromCurrency, toCurrency) => {
 	const response = await axios.get(
-		"http://data.fixer.io/api/latest?access_key=b9922818ac116ec10b8d6a58e1e30696&format=1"
+		`http://data.fixer.io/api/latest?access_key=${API_KEY}`
 	);
 
 	const rate = response.data.rates;
